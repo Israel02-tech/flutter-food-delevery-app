@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/pages/details.dart';
-import 'package:food_delivery_app/widget/food_category.dart';
 import 'package:food_delivery_app/widget/show_item.dart';
 import 'package:food_delivery_app/widget/widget_support.dart';
 

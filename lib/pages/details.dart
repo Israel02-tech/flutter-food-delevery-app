@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/pages/bottom_nav.dart';
-import 'package:food_delivery_app/pages/home.dart';
 import 'package:food_delivery_app/widget/widget_support.dart';
 
 class Details extends StatefulWidget {
