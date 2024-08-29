@@ -28,7 +28,7 @@ class _ShowItemState extends State<ShowItem> {
             elevation: 5.0,
             borderRadius: BorderRadius.circular(10),
             child: Container(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: icecream ? Colors.black : Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -60,7 +60,7 @@ class _ShowItemState extends State<ShowItem> {
                 color: pizza ? Colors.black : Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Image.asset(
                 "images/Pizza3.png",
                 height: 50,
@@ -88,9 +88,9 @@ class _ShowItemState extends State<ShowItem> {
                 color: salad ? Colors.black : Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Image.asset(
-                "images/Salad4.png",
+                "images/Salad1.png",
                 height: 50,
                 width: 50,
                 fit: BoxFit.cover,
@@ -116,7 +116,7 @@ class _ShowItemState extends State<ShowItem> {
                 color: burger ? Colors.black : Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Image.asset(
                 "images/Burger1.png",
                 height: 50,

@@ -14,7 +14,7 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 50.0,
           left: 10.0,
           right: 10.0,
@@ -26,7 +26,7 @@ class _DetailsState extends State<Details> {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_new_rounded,
                 color: Colors.black,
               ),
@@ -37,7 +37,7 @@ class _DetailsState extends State<Details> {
               height: MediaQuery.of(context).size.height / 2.2,
               fit: BoxFit.fill,
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Row(
               children: [
                 Column(
@@ -53,7 +53,7 @@ class _DetailsState extends State<Details> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                   onTap: () {
                     if (a > 1) {
@@ -66,12 +66,12 @@ class _DetailsState extends State<Details> {
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(8)),
-                    child: Icon(Icons.remove, color: Colors.white),
+                    child: const Icon(Icons.remove, color: Colors.white),
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Text(a.toString(), style: Appwidget.SemiBoldTextFieldStyle()),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 GestureDetector(
                   onTap: () {
                     ++a;
@@ -81,13 +81,13 @@ class _DetailsState extends State<Details> {
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(8)),
-                    child: Icon(Icons.add, color: Colors.white),
+                    child: const Icon(Icons.add, color: Colors.white),
                   ),
                 )
               ],
             ),
-            SizedBox(height: 20.0),
-            Text(
+            const SizedBox(height: 20.0),
+            const Text(
               "A salad is a dish consisting of mixed ingredients, frequently vegetables. They are typically served chilled or at room temperature, though some can be served warm. Condiments and salad dressings, which exist in a variety of flavors, are used to make a salad.",
               style: TextStyle(
                 fontSize: 15,
@@ -97,8 +97,8 @@ class _DetailsState extends State<Details> {
               ),
               maxLines: 3,
             ),
-            SizedBox(height: 20.0),
-            Row(
+            const SizedBox(height: 20.0),
+            const Row(
               children: [
                 Text(
                   "Delivery Time",
@@ -123,7 +123,7 @@ class _DetailsState extends State<Details> {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(bottom: 40.0),
               child: Row(
@@ -141,17 +141,17 @@ class _DetailsState extends State<Details> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     width: MediaQuery.of(context).size.width / 2.0,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                       children: [
-                        Text(
+                        const Text(
                           "Add to cart",
                           style: TextStyle(
                             fontSize: 16,
@@ -159,13 +159,13 @@ class _DetailsState extends State<Details> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
-                          padding: EdgeInsets.all(3),
+                          padding: const EdgeInsets.all(3),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10)),
-                          child: Icon(Icons.shopping_cart_checkout_rounded,
+                          child: const Icon(Icons.shopping_cart_checkout_rounded,
                               color: Colors.black),
                         )
                       ],

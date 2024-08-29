@@ -24,11 +24,12 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   void initState() {
-    home = Home();
-    order = Order();
-    profile = Profile();
-    wallet = Wallet();
-    pages = [home, order, profile, wallet];
+    home = const Home();
+    order = const Order();
+     wallet = const Wallet();
+    profile = const Profile();
+   
+    pages = [home, order, wallet, profile];
     super.initState();
   }
 
@@ -37,9 +38,9 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         height: 65,
-        backgroundColor: Color(0xfff2f2f2),
+        backgroundColor: const Color(0xfff2f2f2),
         color: Colors.black,
-        animationDuration: Duration(milliseconds: 500),
+        animationDuration: const Duration(milliseconds: 500),
         onTap: (int index) {
           setState(
             () {
@@ -47,7 +48,7 @@ class _BottomNavState extends State<BottomNav> {
             },
           );
         },
-        items: [
+        items: const [
           Icon(
             Icons.home_outlined,
             color: Colors.white,

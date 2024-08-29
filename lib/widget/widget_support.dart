@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Appwidget {
   static TextStyle BoldTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
       fontSize: 24.0,
       color: Colors.black,
       fontWeight: FontWeight.bold,
@@ -11,7 +11,7 @@ class Appwidget {
   }
 
   static TextStyle HeaderTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
       fontSize: 24.0,
       color: Colors.black,
       fontWeight: FontWeight.bold,
@@ -20,7 +20,7 @@ class Appwidget {
   }
 
   static TextStyle LightTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
       fontSize: 15.0,
       color: Colors.black38,
       fontWeight: FontWeight.w500,
@@ -29,7 +29,7 @@ class Appwidget {
   }
 
   static TextStyle SemiBoldTextFieldStyle() {
-    return TextStyle(
+    return const TextStyle(
       fontSize: 18.0,
       color: Colors.black87,
       fontWeight: FontWeight.w400,

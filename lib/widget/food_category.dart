@@ -12,7 +12,7 @@ class FoodCategory extends StatelessWidget {
       elevation: 5.0,
       borderRadius: BorderRadius.circular(10),
       child: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Image.asset(
           image,
           height: 50,
