@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app/widget/widget_support.dart';
 
 class Details extends StatefulWidget {
-  const Details({super.key});
+  String image, name, details, price;
+   Details({super.key, required this.image, required this.name, required this.details, required this.price});
 
+  
   @override
   State<Details> createState() => _DetailsState();
 }
 
 class _DetailsState extends State<Details> {
   int a = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +34,8 @@ class _DetailsState extends State<Details> {
                 color: Colors.black,
               ),
             ),
-            Image.asset(
-              "images/Salad5.png",
+            Image.network(
+            widget.image,
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 2.2,
               fit: BoxFit.fill,
@@ -44,11 +47,11 @@ class _DetailsState extends State<Details> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Mediterraen",
+                     widget.name,
                       style: Appwidget.SemiBoldTextFieldStyle(),
                     ),
                     Text(
-                      "Chickpea Salad",
+                     widget.details,
                       style: Appwidget.BoldTextFieldStyle(),
                     ),
                   ],
@@ -136,7 +139,7 @@ class _DetailsState extends State<Details> {
                         style: Appwidget.SemiBoldTextFieldStyle(),
                       ),
                       Text(
-                        "\$28",
+                        "\$${widget.price}",
                         style: Appwidget.HeaderTextFieldStyle(),
                       ),
                     ],
@@ -165,7 +168,8 @@ class _DetailsState extends State<Details> {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10)),
-                          child: const Icon(Icons.shopping_cart_checkout_rounded,
+                          child: const Icon(
+                              Icons.shopping_cart_checkout_rounded,
                               color: Colors.black),
                         )
                       ],

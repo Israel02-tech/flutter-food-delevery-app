@@ -16,9 +16,12 @@ class DatabaseMethods {
         .update({"Wallet": amount});
   }
 
-  Future addFoodItemDetail(Map<String, dynamic> userInfoMap, String name) async {
-    return await FirebaseFirestore.instance
-        .collection(name)
-        .add(userInfoMap);
+  Future addFoodItemDetail(
+      Map<String, dynamic> userInfoMap, String name) async {
+    return await FirebaseFirestore.instance.collection(name).add(userInfoMap);
+  }
+// Function to get the food item and the details from the database
+  Future<Stream<QuerySnapshot>> getFoodItem(String name) async {
+    return await FirebaseFirestore.instance.collection(name).snapshots();
   }
 }

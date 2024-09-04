@@ -25,6 +25,7 @@ class _AddFoodState extends State<AddFood> {
   TextEditingController itemnamecontroller = new TextEditingController();
   TextEditingController itempricecontroller = new TextEditingController();
   TextEditingController itemdetailcontroller = new TextEditingController();
+  bool isLoading = false;
 
   final ImagePicker _picker = ImagePicker();
   File? selectedImage;
@@ -41,6 +42,9 @@ class _AddFoodState extends State<AddFood> {
         itemnamecontroller.text != "" &&
         itempricecontroller.text != "" &&
         itemdetailcontroller != "") {
+      setState(() {
+        isLoading = true;
+      });
       String addId = randomAlphaNumeric(10);
 
       Reference firebaseStorageRef =
@@ -57,7 +61,15 @@ class _AddFoodState extends State<AddFood> {
       };
       await DatabaseMethods()
           .addFoodItemDetail(addItemDetails, value!)
-          .then((value) {
+          .then((value) async {
+        setState(() {
+          isLoading = true;
+        });
+        // Setting the variables to null and empty, so that after adding an item and it has been succesfully then the input field and the image field becomes empty,so we can add more product wihout having to refresh the page
+        selectedImage = null;
+        itemnamecontroller.text = "";
+        itemdetailcontroller.text = "";
+        itempricecontroller.text = "";
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             backgroundColor: Colors.orangeAccent,
