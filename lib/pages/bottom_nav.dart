@@ -14,7 +14,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int currentTabIndex = 0;
-
+  
   late List<Widget> pages;
   late Widget currentPage;
   late Home home;

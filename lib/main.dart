@@ -6,6 +6,7 @@ import 'package:food_delivery_app/admin/home_admin.dart';
 import 'package:food_delivery_app/firebase_options.dart';
 import 'package:food_delivery_app/pages/bottom_nav.dart';
 import 'package:food_delivery_app/pages/forgetpassword.dart';
+import 'package:food_delivery_app/pages/home.dart';
 import 'package:food_delivery_app/pages/login.dart';
 import 'package:food_delivery_app/pages/onboarding.dart';
 import 'package:food_delivery_app/pages/signUp.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: BottomNav(),
     );
   }
 }

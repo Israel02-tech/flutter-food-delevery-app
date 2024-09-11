@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
   }
 
 // Creating a stream builder to generate the food details
-  Widget allItems() {
+  Widget allItemshorizontally() {
     return StreamBuilder(
         stream: foodItemStream,
         builder: (context, AsyncSnapshot snapshot) {
@@ -392,7 +392,7 @@ class _HomeState extends State<Home> {
               // calling the function to get the food details
               Container(
                 height: 270,
-                child: allItems(),
+                child: allItemshorizontally(),
               ),
 
               SizedBox(
