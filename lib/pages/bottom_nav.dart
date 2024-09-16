@@ -6,7 +6,7 @@ import 'package:food_delivery_app/pages/wallet.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class BottomNav extends StatefulWidget {
-  const BottomNav({super.key});
+  const BottomNav({super.key,});
 
   @override
   State<BottomNav> createState() => _BottomNavState();

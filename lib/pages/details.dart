@@ -63,13 +63,25 @@ class _DetailsState extends State<Details> {
               ),
             ),
             SizedBox(height: 10),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.network(
-                widget.image,
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 2.5,
-                fit: BoxFit.fill,
+            Material(
+              elevation: 15,
+              borderRadius: BorderRadius.circular(50),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: 10.0,
+                  right: 10.0,
+                  top: 10.0,
+                  bottom: 10.0,
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: Image.network(
+                    widget.image,
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 15),

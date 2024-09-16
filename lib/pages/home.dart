@@ -7,6 +7,7 @@ import 'package:food_delivery_app/widget/show_item.dart';
 import 'package:food_delivery_app/widget/widget_support.dart';
 
 import '../service/database.dart';
+import '../service/shared_preference.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,11 +18,18 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool icecream = false, pizza = false, salad = false, burger = false;
+  String? name;
+
+  getthesharedpreference() async {
+    name = await SharedPreferenceHelper().getUserName();
+    setState(() {});
+  }
 
   Stream? foodItemStream;
 //Calling too function created in the database.dart, in order to get the details of the food item
   ontheload() async {
     foodItemStream = await DatabaseMethods().getFoodItem("Icecream");
+    await getthesharedpreference();
     setState(() {});
   }
 
@@ -210,7 +218,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfff2f2f2),
-      body: SingleChildScrollView(
+      body: name == null ? CircularProgressIndicator(): SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
             top: 35.0,
@@ -226,7 +234,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Hello Israel,',
+                      'Hello, $name',
                       style: Appwidget.BoldTextFieldStyle(),
                     ),
                     Container(

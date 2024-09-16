@@ -20,16 +20,36 @@ class DatabaseMethods {
       Map<String, dynamic> userInfoMap, String name) async {
     return await FirebaseFirestore.instance.collection(name).add(userInfoMap);
   }
+
 // Function to get the food item and the details from the database
   Future<Stream<QuerySnapshot>> getFoodItem(String name) async {
     return await FirebaseFirestore.instance.collection(name).snapshots();
   }
 
-   Future addFoodToCart(Map<String, dynamic> userInfoMap, String id) async {
+  Future addFoodToCart(Map<String, dynamic> userInfoMap, String id) async {
     return await FirebaseFirestore.instance
         .collection("users")
         .doc(id)
         .collection("Cart")
         .add(userInfoMap);
   }
+
+  // Function to get the food item added to the user's cart from the database into the order page
+  Future<Stream<QuerySnapshot>> getFoodCart(String id) async {
+    return await FirebaseFirestore.instance
+        .collection("users")
+        .doc(id)
+        .collection("Cart")
+        .snapshots();
+  }
+
+  // // Method to delete food item from Firestore
+  // Future<void> deleteFoodItem(String id) async {
+  //   await FirebaseFirestore.instance
+  //       .collection('users')
+  //       .doc(id)
+  //       .collection('Cart')
+  //       .doc(id)
+  //       .delete();
+  // }
 }

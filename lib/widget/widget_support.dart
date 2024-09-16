@@ -36,4 +36,13 @@ class Appwidget {
       fontFamily: 'Poppins',
     );
   }
+
+  static TextStyle SlightBoldTextFieldStyle() {
+    return const TextStyle(
+      fontSize: 18.0,
+      color: Colors.black87,
+      fontWeight: FontWeight.w800,
+      fontFamily: 'Poppins',
+    );
+  }
 }

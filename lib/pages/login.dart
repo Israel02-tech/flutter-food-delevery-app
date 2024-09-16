@@ -126,7 +126,7 @@ class _LoginState extends State<Login> {
                       child: Container(
                         padding: const EdgeInsets.only(right: 20, left: 20),
                         width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height / 1.9,
+                        height: MediaQuery.of(context).size.height / 1.7,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -145,7 +145,7 @@ class _LoginState extends State<Login> {
                                 controller: useremailcontroller,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return "Please Enter Email";
+                                    return "Please Enter Your Valid Email";
                                   }
                                   return null;
                                 },
@@ -160,7 +160,7 @@ class _LoginState extends State<Login> {
                                 controller: userpasswordcontroller,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return "Please Enter Password";
+                                    return "Please Enter Your Password";
                                   }
                                   return null;
                                 },
